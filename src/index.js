@@ -55,11 +55,7 @@ function decode(expr) {
         res = res.join('').split(' ').filter( i => i !== '')
         
         res.map( item => { 
-          if (item.length > 5) {
-            for (let i = 0, j = item.length; i < j; i += 5) { 
-              text += MORSE_TABLE[(item.slice(i, i + 5))] }
-          }
-        text += ((MORSE_TABLE[item] != undefined) ? (MORSE_TABLE[item]) : (' '))
+          text += ((MORSE_TABLE[item] != undefined) ? (MORSE_TABLE[item]) : (' '))
         })
       })
       text += ' '
